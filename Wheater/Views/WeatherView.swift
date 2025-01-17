@@ -23,26 +23,15 @@ struct WeatherView: View {
                 .padding(.bottom,80)
             
             // Weather Icon
-            VStack {
-                ZStack {
-                    Image(systemName: "cloud.sun.fill")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 123, height: 123)
-                        .foregroundColor(Color.orange)
-                    
-                    HStack(spacing: -10) {
-                        ForEach(0..<3) { _ in
-                            Circle()
-                                .fill(Color.gray)
-                                .frame(width: 40, height: 40)
-                        }
-                    }
-                    .offset(x: 40, y: -30)
+            VStack(alignment: .center) {
+                AsyncImage(url: URL(string: "https:\(viewModel.weather?.current.condition.icon ?? "")")) { image in
+                    image.resizable().scaledToFit().frame(width: 123, height: 123)
+                } placeholder: {
+                    ProgressView()
                 }
                 // City Name and Temperature
                 HStack(spacing: 11) {
-                    Text("Hyderabad")
+                    Text("\(viewModel.weather?.location.name ?? "No city")")
                         .font(.title)
                         .font(.system(size: 30))
                         .fontWeight(.bold)
@@ -52,7 +41,7 @@ struct WeatherView: View {
                         .frame(width: 21, height: 21)
                 }
                 HStack(alignment: .top) {
-                    Text("\(viewModel.weather?.current.temp_c ?? 0, specifier: "%.0f")")
+                    Text("\(viewModel.weather?.current.temp_f ?? 0, specifier: "%.0f")")
 //                    Text("31")
                         .font(.system(size: 70))
                         .fontWeight(.bold)
@@ -65,9 +54,9 @@ struct WeatherView: View {
             
             // Weather Details Bottom
             HStack {
-                WeatherDetailView(title: "Humidity", value: "20%")
-                WeatherDetailView(title: "UV", value: "4")
-                WeatherDetailView(title: "Feels Like", value: "38°")
+                WeatherDetailView(title: "Humidity", value: "\(viewModel.weather?.current.humidity ?? 0)%")
+                WeatherDetailView(title: "UV", value: "\(viewModel.weather?.current.uv ?? 0)")
+                WeatherDetailView(title: "Feels Like", value: "\(viewModel.weather?.current.feelslike_f ?? 0)")
             }
             .frame(height: 75)
             .background(Color(.systemGray5))

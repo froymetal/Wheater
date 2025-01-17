@@ -23,5 +23,3 @@ struct WeatherDetailView: View {
         .frame(maxWidth: .infinity)
     }
 }
-
-
