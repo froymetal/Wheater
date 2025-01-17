@@ -12,6 +12,7 @@
 		0299DE182D3ABEDA00683490 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0299DE172D3ABEDA00683490 /* Assets.xcassets */; };
 		0299DE1B2D3ABEDA00683490 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0299DE1A2D3ABEDA00683490 /* Preview Assets.xcassets */; };
 		0299DE232D3ABF5F00683490 /* WeatherDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0299DE222D3ABF5F00683490 /* WeatherDetailView.swift */; };
+		0299DE292D3AC09000683490 /* HexaColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0299DE282D3AC09000683490 /* HexaColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		0299DE172D3ABEDA00683490 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0299DE1A2D3ABEDA00683490 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0299DE222D3ABF5F00683490 /* WeatherDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailView.swift; sourceTree = "<group>"; };
+		0299DE282D3AC09000683490 /* HexaColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexaColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,10 @@
 		0299DE122D3ABED700683490 /* Wheater */ = {
 			isa = PBXGroup;
 			children = (
+				0299DE272D3AC06F00683490 /* Helpers */,
+				0299DE262D3AC06500683490 /* Service */,
+				0299DE252D3AC05900683490 /* Models */,
+				0299DE242D3AC04B00683490 /* ViewModels */,
 				0299DE212D3ABF4F00683490 /* Views */,
 				0299DE132D3ABED700683490 /* WheaterApp.swift */,
 				0299DE152D3ABED700683490 /* ContentView.swift */,
@@ -76,6 +82,35 @@
 				0299DE222D3ABF5F00683490 /* WeatherDetailView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		0299DE242D3AC04B00683490 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0299DE252D3AC05900683490 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0299DE262D3AC06500683490 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		0299DE272D3AC06F00683490 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0299DE282D3AC09000683490 /* HexaColor.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +186,7 @@
 				0299DE232D3ABF5F00683490 /* WeatherDetailView.swift in Sources */,
 				0299DE162D3ABED700683490 /* ContentView.swift in Sources */,
 				0299DE142D3ABED700683490 /* WheaterApp.swift in Sources */,
+				0299DE292D3AC09000683490 /* HexaColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
