@@ -2,7 +2,7 @@
 //  WheaterApp.swift
 //  Wheater
 //
-//  Created by Consultant on 1/17/25.
+//  Created by Froy on 1/17/25.
 //
 
 import SwiftUI
@@ -11,7 +11,7 @@ import SwiftUI
 struct WheaterApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TestMainView()
         }
     }
 }
