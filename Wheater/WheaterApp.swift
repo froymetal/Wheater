@@ -11,7 +11,9 @@ import SwiftUI
 struct WheaterApp: App {
     var body: some Scene {
         WindowGroup {
-            TestMainView()
+            let weatherViewModel = WeatherViewModel()
+            LandingView(viewModel: weatherViewModel)
+            //            TestMainView()
         }
     }
 }
