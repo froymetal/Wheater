@@ -19,6 +19,7 @@
 		0299DE312D3AC24A00683490 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0299DE302D3AC24A00683490 /* WeatherViewModel.swift */; };
 		0299DE332D3AC27A00683490 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0299DE322D3AC27A00683490 /* WeatherView.swift */; };
 		0299DE352D3AC2C600683490 /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0299DE342D3AC2C600683490 /* LandingView.swift */; };
+		0299DE372D3B1E6B00683490 /* Complete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0299DE362D3B1E6B00683490 /* Complete.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		0299DE302D3AC24A00683490 /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 		0299DE322D3AC27A00683490 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		0299DE342D3AC2C600683490 /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
+		0299DE362D3B1E6B00683490 /* Complete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Complete.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				0299DE152D3ABED700683490 /* ContentView.swift */,
 				0299DE172D3ABEDA00683490 /* Assets.xcassets */,
 				0299DE192D3ABEDA00683490 /* Preview Content */,
+				0299DE362D3B1E6B00683490 /* Complete.swift */,
 			);
 			path = Wheater;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				0299DE292D3AC09000683490 /* HexaColor.swift in Sources */,
 				0299DE312D3AC24A00683490 /* WeatherViewModel.swift in Sources */,
 				0299DE352D3AC2C600683490 /* LandingView.swift in Sources */,
+				0299DE372D3B1E6B00683490 /* Complete.swift in Sources */,
 				0299DE332D3AC27A00683490 /* WeatherView.swift in Sources */,
 				0299DE2D2D3AC1C300683490 /* WeatherService.swift in Sources */,
 				0299DE2B2D3AC18F00683490 /* WeatherConstants.swift in Sources */,

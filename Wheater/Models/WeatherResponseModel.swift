@@ -32,3 +32,8 @@ struct Location: Codable {
     let country: String
     let localtime: String
 }
+
+struct CitySuggestion: Identifiable {
+    let id = UUID()
+    let name: String
+}

@@ -12,7 +12,9 @@ class WeatherViewModel: ObservableObject {
     @Published var weather: WeatherResponse?
     @Published var isLoading: Bool = false
     @Published var errorMessage: String?
-
+    @Published var citySearchQuery: String = ""
+    @Published var citySuggestions: [CitySuggestion] = []
+    
     private var cancellables = Set<AnyCancellable>()
     private let service: WeatherService
 
@@ -38,5 +40,12 @@ class WeatherViewModel: ObservableObject {
             })
             .store(in: &cancellables)
     }
-}
 
+    func updateCitySuggestions() {
+        // Simulando una lista de ciudades para la demo
+        let allCities = ["New York", "Los Angeles", "Houston", "Chicago", "San Francisco", "Miami"]
+        citySuggestions = allCities
+            .filter { $0.lowercased().contains(citySearchQuery.lowercased()) }
+            .map { CitySuggestion(name: $0) }
+    }
+}
