@@ -24,6 +24,15 @@ struct LandingView: View {
             } else if let errorMessage = viewModel.errorMessage {
                 Text("Error: \(errorMessage)")
                     .foregroundColor(.red)
+            } else {
+                VStack(alignment: .center, spacing: 20){
+                    Text("No City selected")
+                        .font(.system(size: 30))
+                        .fontWeight(.bold)
+                    Text("Please Search For A City")
+                        .font(.system(size: 15))
+                        .fontWeight(.bold)
+                }
             }
         }
         .onAppear {
