@@ -20,6 +20,7 @@ struct WeatherView: View {
             searchBar()
                 .padding(.top, 44)
                 .padding(.horizontal, 24)
+                .padding(.bottom,80)
             
             // City Suggestions
             if !viewModel.citySuggestions.isEmpty {
@@ -38,19 +39,32 @@ struct WeatherView: View {
             
             // Weather Icon and Details
             if let weather = viewModel.weather {
-                VStack {
+                VStack(alignment: .center) {
+                    // Weather Icon
                     AsyncImage(url: URL(string: "https:\(weather.current.condition.icon)")) { image in
                         image.resizable().scaledToFit().frame(width: 123, height: 123)
                     } placeholder: {
                         ProgressView()
                     }
-                    
-                    Text(weather.location.name)
-                        .font(.title)
-                        .fontWeight(.bold)
-                    
-                    Text("\(weather.current.temp_f, specifier: "%.0f")°F")
-                        .font(.largeTitle)
+                    // City Name and Temperature
+                    HStack(spacing: 11) {
+                        Text(weather.location.name)
+                            .font(.system(size: 30))
+                            .fontWeight(.bold)
+                        Image("Arrow")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 21, height: 21)
+                    }
+                    HStack(alignment: .top) {
+                        Text("\(weather.current.temp_f, specifier: "%.0f")")
+                            .font(.system(size: 70))
+                            .fontWeight(.bold)
+                        Image("Degrees")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 8, height: 8)
+                    }
                 }
                 .padding(.bottom, 35)
                 
