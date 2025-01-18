@@ -21,6 +21,16 @@ class WeatherViewModel: ObservableObject {
     init(service: WeatherService = WeatherService()) {
         self.service = service
     }
+    
+    func selectCity(_ cityName: String) {
+        // Save the city inn UserDefaults
+        UserDefaults.standard.set(cityName, forKey: "lastSelectedCity")
+        
+        // Update UI
+        citySearchQuery = cityName
+        citySuggestions = []
+        fetchWeather(for: cityName)
+    }
 
     func fetchWeather(for city: String) {
         isLoading = true

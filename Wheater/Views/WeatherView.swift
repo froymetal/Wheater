@@ -26,9 +26,7 @@ struct WeatherView: View {
             if !viewModel.citySuggestions.isEmpty {
                 List(viewModel.citySuggestions) { suggestion in
                     Button(action: {
-                        viewModel.fetchWeather(for: suggestion.name)
-                        viewModel.citySearchQuery = suggestion.name
-                        viewModel.citySuggestions = []
+                        viewModel.selectCity(suggestion.name)
                     }) {
                         Text(suggestion.name)
                             .foregroundColor(.primary)

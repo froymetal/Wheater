@@ -36,7 +36,9 @@ struct LandingView: View {
             }
         }
         .onAppear {
-            viewModel.fetchWeather(for: "Houston")
+            // Cargar la última ciudad guardada o usar Houston como default
+            let savedCity = UserDefaults.standard.string(forKey: "lastSelectedCity") ?? "Houston"
+            viewModel.fetchWeather(for: savedCity)
         }
     }
 }
